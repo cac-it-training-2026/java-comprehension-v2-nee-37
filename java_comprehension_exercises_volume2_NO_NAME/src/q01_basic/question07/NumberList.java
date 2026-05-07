@@ -22,6 +22,7 @@ class NumberList {
 	 */
 	public void addFromOneTo(Integer limit) {
 		//TODO ここから実装する
+
 		for (int i = 1; i <= limit; i++) {
 			numbers.add(i);
 		}
