@@ -1,7 +1,8 @@
-package q01_basic.question03;
+package q02_advanced.question01;
 
-class Member {
-	//TODO ここから実装する
+public class Member {
+	private int id;
+	private String passward;
 	private String name;
 	private int age;
 	private int rank;
@@ -13,6 +14,8 @@ class Member {
 
 	public void showMember() {
 		System.out.println("***MEMBER DATA*** ");
+		System.out.println("id:" + id);
+		System.out.println("password" + passward);
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
@@ -25,10 +28,12 @@ class Member {
 		rank = 0;
 	}
 
-	public Member(String name, int age, int rank) {
+	public Member(int id, String passward, String name, int age, int rank) {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+		this.id = id;
+		this.passward = passward;
 	}
 
 	/**
@@ -73,4 +78,31 @@ class Member {
 		this.rank = rank;
 	}
 
+	/**
+	 * @return id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id セットする id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return passward
+	 */
+	public String getPassword() {
+		return passward;
+	}
+
+	/**
+	 * @param passward セットする passward
+	 */
+	public void setPassword(String passward) {
+		this.passward = passward;
+	}
 }

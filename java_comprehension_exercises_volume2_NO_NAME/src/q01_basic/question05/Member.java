@@ -1,7 +1,9 @@
-package q01_basic.question03;
+package q01_basic.question05;
 
-class Member {
+public class Member extends AbstMember {
 	//TODO ここから実装する
+	private int id;
+	private String passward;
 	private String name;
 	private int age;
 	private int rank;
@@ -11,8 +13,11 @@ class Member {
 		rank++;
 	}
 
+	@Override
 	public void showMember() {
 		System.out.println("***MEMBER DATA*** ");
+		System.out.println("id:" + id);
+		System.out.println("password" + passward);
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
@@ -25,10 +30,18 @@ class Member {
 		rank = 0;
 	}
 
-	public Member(String name, int age, int rank) {
+	public Member(int id, String passward, String name, int age, int rank) {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
+		this.id = id;
+		this.passward = passward;
+	}
+
+	@Override
+	public void buyItem() {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println(name + "purchased the item at 50% off");
 	}
 
 	/**
@@ -71,6 +84,34 @@ class Member {
 	 */
 	public void setRank(int rank) {
 		this.rank = rank;
+	}
+
+	/**
+	 * @return id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id セットする id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return passward
+	 */
+	public String getPassword() {
+		return passward;
+	}
+
+	/**
+	 * @param passward セットする passward
+	 */
+	public void setPassword(String passward) {
+		this.passward = passward;
 	}
 
 }
